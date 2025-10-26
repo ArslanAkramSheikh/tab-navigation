@@ -3,7 +3,7 @@ import React from 'react';
 import { Text, View, Image, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import { styles } from '../navigation/TabNavigator';
 
-export default function VegetablesScreen() {
+export default function BakeryItemScreen() {
     const vegetables = [
         { name: 'Carrot', price: '$1.00', image: 'https://images.unsplash.com/photo-1510442393143-041057d09394?q=80&w=1031&auto=format&fit=crop' },
         { name: 'Cucumber', price: '$0.90', image: 'https://images.unsplash.com/photo-1449300079323-02e209d9d3a6?q=80&w=1974&auto=format&fit=crop' },
@@ -15,7 +15,7 @@ export default function VegetablesScreen() {
 
     return (
         <ScrollView style={styles.container}>
-            <Text style={styles.title}>Fresh vegetables directy from farmers land</Text>
+            <Text style={styles.title}>Fresh Bakery items</Text>
             {vegetables.map((vegetable, index) => (
                 <View key={index} style={styles.itemContainer}>
                     <Image source={{ uri: vegetable.image }} style={styles.image} />
